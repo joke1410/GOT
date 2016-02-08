@@ -22,7 +22,6 @@
 		_sharedInstance = [[GOTRestAPI alloc] init];
 	});
 	
-	
 	return _sharedInstance;
 }
 
@@ -36,6 +35,7 @@
 -(void)getCharactersAsync:(int)__limit withCompletion:(void (^)(NSArray *articles, NSError *error))callback
 {
 	NSString *url = [[NSString alloc] initWithFormat:@"%s%s&category=%s&limit=%d",SERVER_API_URL, MOST_VIEWED_ARTICLES_ENDPOINT, ARTICLE_CATEGORY,__limit];
+	
 	
 	NSURLSession *session = [NSURLSession sharedSession];
 	[[session dataTaskWithURL:[NSURL URLWithString:url]
