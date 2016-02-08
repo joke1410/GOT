@@ -22,6 +22,7 @@
 		_sharedInstance = [[GOTRestAPI alloc] init];
 	});
 	
+	
 	return _sharedInstance;
 }
 
